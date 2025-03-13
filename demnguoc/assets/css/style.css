@@ -96,3 +96,26 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    #clockdiv {
+        flex-direction: column;
+        gap: 10px;
+        font-size: 30px;
+    }
+    .time-box {
+        min-width: auto;
+        width: 100%;
+        text-align: center;
+    }
+    .info {
+        width: 100%;
+        padding: 20px;
+    }
+    .info h2, .info h3 {
+        font-size: 20px;
+    }
+}
