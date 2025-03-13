@@ -3,91 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đếm Ngược Sa Mạc</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Montserrat', sans-serif;
-            text-align: center;
-            background: url('bg.jpg') no-repeat center center/cover;
-            color: rgb(255, 255, 255);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-            padding: 20px;
-        }
-        h1, h2, h3 {
-            margin-bottom: 15px;
-        }
-        #clockdiv {
-            display: flex;
-            gap: 30px;
-            font-size: 40px;
-            font-weight: bold;
-            margin-top: 20px;
-            margin-bottom: 30px;
-        }
-        .time-box {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px 30px;
-            border-radius: 10px;
-            min-width: 120px;
-        }
-        .info {
-            margin-top: 40px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 10px;
-            width: 80%;
-            line-height: 1.8;
-        }
-    </style>
+    <title>Đếm Ngược Sa Mạc Huấn Luyện</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>LIÊN ĐOÀN CÁC THÁNH TỬ ĐẠO VIỆT NAM</h1>
-    <h2>GIÁO PHẬN MỸ THO</h2>
-    <h3>ĐẾM NGƯỢC SA MẠC HUẤN LUYỆN</h3>
-    
-    <div id="clockdiv">
-        <div class="time-box"><span id="days"></span> Ngày</div>
-        <div class="time-box"><span id="hours"></span> Giờ</div>
-        <div class="time-box"><span id="minutes"></span> Phút</div>
-        <div class="time-box"><span id="seconds"></span> Giây</div>
+    <div class="container">
+        <header>
+            <h1>LIÊN ĐOÀN CÁC THÁNH TỬ ĐẠO VIỆT NAM</h1>
+            <h2>GIÁO PHẬN MỸ THO</h2>
+            <h3>ĐẾM NGƯỢC SA MẠC HUẤN LUYỆN</h3>
+        </header>
+        
+        <div class="countdown">
+            <div class="countdown-item">
+                <span id="hours">14</span>
+                <p>Giờ</p>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">37</span>
+                <p>Phút</p>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">31</span>
+                <p>Giây</p>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h4>Thông Tin Chi Tiết</h4>
+            <p><strong>📅 Ngày:</strong> 30/06/2025</p>
+            <p><strong>📍 Địa điểm:</strong> Trung Tâm Mục Vụ Gp. Mỹ Tho</p>
+            <p><strong>📖 Dặn dò:</strong> Mang theo Kinh Thánh, đồng phục TNTT, đồ dùng cá nhân, thuốc đặc trị cá nhân (nếu có)...</p>
+            <p><strong>⚠️ Nội quy:</strong> Giữ trật tự, tuân thủ hướng dẫn, không sử dụng điện thoại khi diễn ra sa mạc. Đọc thêm nội quy tại sa mạc trường.</p>
+        </div>
     </div>
-    
-    <div class="info">
-        <h2>Thông Tin Chi Tiết</h2>
-        <h3>📅 Ngày: 30/06/2025</h3>
-        <h3>📍 Địa điểm: Trung Tâm Mục Vụ Gp.Mỹ Tho</h3>
-        <p>📝 Dặn dò: Mang theo Kinh Thánh, đồng phục TNTT, đồ dùng cá nhân, thuốc đặc trị cá nhân (nếu có)...</p>
-        <p>⚠️ Nội quy: Giữ trật tự, tuân thủ hướng dẫn, không sử dụng điện thoại khi diễn ra sa mạc. Đọc thêm nội quy tại sa mạc trường.</p>
-    </div>
-    
-    <script>
-        function updateCountdown() {
-            const targetDate = new Date("June 30, 2025 14:30:00").getTime();
-            const now = new Date().getTime();
-            const timeLeft = targetDate - now;
-            
-            if (timeLeft > 0) {
-                document.getElementById("days").innerText = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                document.getElementById("hours").innerText = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                document.getElementById("minutes").innerText = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-                document.getElementById("seconds").innerText = Math.floor((timeLeft % (1000 * 60)) / 1000);
-            } else {
-                document.getElementById("clockdiv").innerHTML = "⏳ Đã đến ngày nhập Sa Mạc. Lên Đường !";
-            }
-        }
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
