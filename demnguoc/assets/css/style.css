@@ -100,24 +100,43 @@ body {
 @media (max-width: 768px) {
     body {
         padding: 10px;
-    }
-    #clockdiv {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
-        font-size: 30px;
+        align-items: center;
+        height: auto;
     }
-    .time-box {
-        min-width: auto;
-        width: 100%;
-        text-align: center;
+    h1 {
+        font-size: 22px;
     }
-    .info {
-        width: 95%;
-        padding: 20px;
+    h2, h3 {
         font-size: 18px;
     }
-    .info h2, .info h3 {
+    #clockdiv {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 28px;
+    }
+    .time-box {
+        min-width: 80px;
+        padding: 10px 15px;
+        font-size: 20px;
+    }
+    .info {
+        width: 100%;
+        max-width: 400px;
+        padding: 15px;
+        font-size: 18px;
+        text-align: left;
+        word-break: break-word;
+    }
+    .info h2 {
         font-size: 22px;
+        text-align: center;
+    }
+    .info h3 {
+        font-size: 20px;
     }
     .info p {
         font-size: 16px;
