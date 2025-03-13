@@ -1,0 +1,94 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: "Raleway";
+	font-weight: 400;
+}
+
+#main-logo {
+	margin: auto;
+}
+
+#main-container {
+    background-image: url('/demnguoc/assets/img/bg.jpg'); /* Dùng đường dẫn tuyệt đối */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#main-container h1 span,
+#main-container p span {
+	font-weight: 800;
+}
+
+#main-container p {
+	width: 50%;
+	margin: 35px auto;
+	font-size: 18px;
+}
+
+#clockdiv {
+    color: white; /* Chỉnh màu trắng hoặc màu khác theo ý mày */
+    font-size: 40px; /* Tăng kích thước cho dễ nhìn */
+    font-weight: bold;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+	margin: 20px 25px;
+	line-height: 100px;
+	font-size: 65px;
+	border-top: 1px solid #f1f1f1;
+}
+
+.smalltext {
+	font-size: 25px;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+#clockdiv {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+font-family: 'Montserrat', sans-serif;
+font-weight: 600;
+
+@font-face {
+    font-family: 'Montserrat Alternates';
+    src: url('font/MontserratAlternates-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 600;
+}
+
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 600;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
